@@ -37,10 +37,11 @@ public class SellersRepository {
 
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                resultSet.getInt("id");
-                resultSet.getString("name");
-                resultSet.getString("username");
-                resultSet.getString("password");
+                return new Sellers(
+                resultSet.getInt("id"),
+                resultSet.getString("name"),
+                resultSet.getString("username"),
+                resultSet.getString("password"));
 
             }
             return null;
@@ -60,11 +61,11 @@ public class SellersRepository {
 
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                resultSet.getInt("id");
-                resultSet.getString("name");
-                resultSet.getString("username");
-                resultSet.getString("password");
-
+                return new Sellers(
+                        resultSet.getInt("id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("username"),
+                        resultSet.getString("password"));
             }
             return null;
 
