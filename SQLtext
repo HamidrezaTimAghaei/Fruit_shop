@@ -1,0 +1,31 @@
+Create table sellers
+(
+    id       serial primary key,
+    name     varchar(50)        not null,
+    username varchar(50) unique not null,
+    password varchar(50)        not null
+);
+
+Create table customers
+(
+    id       serial primary key,
+    name     varchar(50)        not null,
+    phone    varchar(20) unique not null,
+    address  varchar(200)       not null,
+    username varchar(50) unique not null,
+    password varchar(50)        not null
+);
+
+
+
+Create table fruits
+(
+    id          serial primary key,
+    name        varchar(50)    not null,
+    description text,
+    stock       decimal(10, 2) not null,
+    price       decimal(10, 2) not null
+);
+
+insert into sellers(name, username, password)
+values ('Hamidreza', 'Hamidreza98', 'ha1376');
