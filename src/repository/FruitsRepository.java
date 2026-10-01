@@ -56,7 +56,7 @@ public class FruitsRepository {
 
     }
 
-    public List<Fruits> findAll(String username) {
+    public List<Fruits> findAll() {
         String sql = "select *from fruits";
         List<Fruits> fruits = new ArrayList<>();
         try (Connection connection = DataBaseConnection.getConnection();
