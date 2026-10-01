@@ -21,6 +21,16 @@ public class FruitsService {
         }
         fruitsRepository.save(fruits);
     }
+    public Fruits getFruitById(int id) {
+
+        Fruits fruits = fruitsRepository.findById(id);
+
+        if (fruits == null) {
+            throw new FruitNotFoundException("Fruit not found");
+        }
+
+        return fruits;
+    }
 
     public List<Fruits> getAllFruits() {
         return fruitsRepository.findAll();
